@@ -1,33 +1,47 @@
-html,body {
-
+html, body {
   font-family: 'Raleway', sans-serif;
-
   padding: 3em 2em;
-
   font-size: 58px;
-
   background: #222;
-
-  color: #aaa
-
+  color: #aaa;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+/* Yazıların ekran dışına taşmaması için */
+body * {
+  max-width: 100%;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
 
-
-h1,h2 {
-
+h1, h2 {
   font-weight: 200;
-
   margin: 0.4em 0;
-
 }
 
-h1 { font-size: 3.5em; }
+h1 {
+  font-size: 3.5em;
+}
 
 h2 {
-
   color: #888;
-
   font-size: 2em;
+}
 
+/* Mobil uyum için media query */
+@media (max-width: 768px) {
+  html, body {
+    padding: 1em;
+    font-size: 28px; /* Mobilde yazı çok büyük olmasın */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
 }
