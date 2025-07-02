@@ -1,21 +1,36 @@
 html, body {
   font-family: 'Raleway', sans-serif;
-  padding: 3em 2em;
+  padding: 0;
+  margin: 0;
   font-size: 58px;
   background: #222;
   color: #aaa;
-  margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
-/* Yazıların ekran dışına taşmaması için */
-body * {
-  max-width: 100%;
-  word-wrap: break-word;
+/* İçeriği ortalayacak kutu */
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
+/* Yazı elemanı */
+.txt-rotate {
+  display: block;
+  word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Başlıklar için örnek */
 h1, h2 {
   font-weight: 200;
   margin: 0.4em 0;
@@ -30,11 +45,11 @@ h2 {
   font-size: 2em;
 }
 
-/* Mobil uyum için media query */
+/* Mobil cihazlar için */
 @media (max-width: 768px) {
   html, body {
-    padding: 1em;
-    font-size: 28px; /* Mobilde yazı çok büyük olmasın */
+    font-size: 30px;
+    padding: 0;
   }
 
   h1 {
@@ -43,5 +58,9 @@ h2 {
 
   h2 {
     font-size: 1.5em;
+  }
+
+  .container {
+    padding: 10px;
   }
 }
